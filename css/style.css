@@ -202,7 +202,7 @@ hr {
 }
 
 .intro h1 {
-    font-size: 40px;
+    font-size: 45px;
     font-weight: 600;
     /*    letter-spacing: 2px;*/
     margin-bottom: 20px;
@@ -234,7 +234,7 @@ header .intro-text {
 #about img {
     /* border-radius: 50%;*/
     width: 160px;
-    height: 200px;
+    height: 210px;
     display: inline-block;
 }
 
