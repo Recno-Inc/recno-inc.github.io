@@ -65,6 +65,7 @@ ol {
     display: inline-block;
 }
 
+
 * html .clearfix {
     height: 1%;
 }
@@ -126,7 +127,7 @@ hr {
 }
 
 .navbar-custom .nav li a {
-    margin: 0 60px;
+    margin: 0 30px;
     text-transform: uppercase;
     letter-spacing: 2px;
     -webkit-transition: background .3s ease-in-out;
@@ -240,6 +241,77 @@ header .intro-text {
 }
 
 #about p {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    line-height: 22px;
+}
+
+
+/* business */
+
+#business {
+    padding: 60px 0;
+}
+
+#business .business-text {
+    margin-left: 10px;
+    text-align: center;
+}
+
+#business img {
+    /* border-radius: 50%;*/
+    width: 160px;
+    height: 210px;
+    display: inline-block;
+}
+
+#business p {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    line-height: 22px;
+}
+
+
+
+/* campany */
+
+#campany {
+    padding: 60px 0;
+}
+
+#campany .campany-text {
+    margin-left: 10px;
+    text-align: center;
+}
+
+#campany img {
+    /* border-radius: 50%;*/
+    width: 160px;
+    height: 210px;
+    display: inline-block;
+}
+
+#campany p {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    line-height: 22px;
+}
+
+
+
+/* contacts */
+
+#contact {
+    padding: 60px 0;
+}
+
+#contact .contact-text {
+    margin-left: 10px;
+    text-align: center;
+}
+
+
+#contact p {
     margin-top: 40px;
     margin-bottom: 30px;
     line-height: 22px;
