@@ -272,6 +272,31 @@ header .intro-text {
 }
 
 
+/* news */
+
+#news {
+    padding: 60px 0;
+}
+
+#news .news-text {
+    margin-left: 10px;
+    text-align: center;
+}
+
+#news img {
+    /* border-radius: 50%;*/
+    width: 160px;
+    height: 210px;
+    display: inline-block;
+}
+
+#news p {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    line-height: 22px;
+}
+
+
 
 /* campany */
 
