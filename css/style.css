@@ -88,8 +88,9 @@ hr {
     position: relative;
     background: #666;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     border: 0;
+
 }
 
 /* Navigation */
@@ -286,7 +287,7 @@ header .intro-text {
 #news img {
     /* border-radius: 50%;*/
     width: 400px;
-    height: 200px;
+    height: 210px;
     display: inline-block;
 }
 
