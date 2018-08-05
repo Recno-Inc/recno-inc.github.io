@@ -285,8 +285,8 @@ header .intro-text {
 
 #news img {
     /* border-radius: 50%;*/
-    width: 160px;
-    height: 210px;
+    width: 400px;
+    height: 200px;
     display: inline-block;
 }
 
