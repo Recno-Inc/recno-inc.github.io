@@ -161,6 +161,12 @@ hr {
     color: #fff;
 }
 
+@media only screen and (max-width: 768px) {
+    li {
+        margin: 0 2vw;
+    }
+}
+
 .btn-default {
     text-transform: uppercase;
     color: #555;
@@ -191,7 +197,7 @@ hr {
     padding: 0;
     text-align: center;
     color: #333;
-    background: url(../img/intro-bg.jpg) no-repeat center top;
+    background: url(../img/lathe.jpg) no-repeat center top;
     background-color: #e5e5e5;
     -webkit-background-size: cover;
     -moz-background-size: cover;
