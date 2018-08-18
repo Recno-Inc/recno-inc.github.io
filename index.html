@@ -12,11 +12,8 @@
     <link rel="apple-touch-icon" href="img/recno_logo.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/recno_logo.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/recno_logo.png">
-
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
-
-
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
     <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
@@ -29,6 +26,8 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
+
+
     <div id="sns-btn">
         <h1>
             <!--                       <li> <a class="page-scroll" href="#sns">SNS</a></li>-->
@@ -39,7 +38,6 @@
             <a href="https://www.instagram.com/s____gfa/"><span class="icon-instagram2"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;
         </h1>
     </div>
-
 
     <!-- Header -->
     <header id="header">
@@ -116,6 +114,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
     <div id="business">
@@ -460,6 +459,29 @@ Recno自社ブランド第1号</a></p>
     <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
     <script type="text/javascript" src="js/contact_me.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+
+    <script>
+        $(function() {
+            var $fixElement = $('#sns-btn'); // 追従する要素
+            var baseFixPoint = $fixElement.offset().top; // 追従する要素の初期位置
+            var fixClass = 'is-fixed'; // 追従時に付与するclass
+
+            // 要素が追従する処理
+            function fixFunction() {
+                var windowScrolltop = $(window).scrollTop();
+                // スクロールが初期位置を通過しているとき
+                if (windowScrolltop >= baseFixPoint) {
+                    $fixElement.addClass(fixClass);
+                } else {
+                    $fixElement.removeClass(fixClass);
+                }
+            }
+
+            $(window).on('load scroll', function() {
+                fixFunction();
+            });
+        });
+    </script>
 </body>
 
 </html>
