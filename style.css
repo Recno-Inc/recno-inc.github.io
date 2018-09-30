@@ -1,0 +1,891 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.contents {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 100;
+    letter-spacing: 20px;
+    text-indent: 20px;
+    color: #555555;
+}
+
+@media (max-width: 480px) {
+    
+    .contents {
+        font-size: 40px;
+    }
+    
+}
+
+.sp {
+        display: none;
+    }
+
+@media (max-width: 480px) {
+    
+    .pc {
+        display: none;
+    }
+    
+    .sp {
+        display: block;
+    }
+    
+}
+
+.fadein {
+    opacity: 0.0;
+    transition: all 1000ms;
+}
+
+.scrollin {
+    opacity: 1.0;
+    transform: translateY(-10px);
+}
+
+/*--------------------loading--------------------*/
+
+.loading {
+	width: 100%;
+	height: 100%;
+	background: #ffffff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999999;
+}
+
+.loading img {
+	width: 330px;
+	height: 100px;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px;
+	left: 50%;
+	margin-left: -165px;
+}
+
+/*#loader-bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #000;
+  z-index: 1;
+}
+
+#loader {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+#loader img {
+    width: 300px;
+}*/
+
+/*--------------------top--------------------*/
+
+#top {
+    position: relative;
+}
+
+#top-img {
+    width: 100%;
+}
+
+/*--------------------menu--------------------*/
+
+#remain {
+    width: 100%;
+    height: 75px;
+    padding: 0;
+}
+
+#menu {
+    width: 100%;
+    height: 75px;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255,255,255,0.8);
+    z-index: 9999;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#buttons {
+    float: right;
+    margin-right: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#buttons a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 25px;
+    margin: 10px 20px;
+    font-family: 'Palanquin', sans-serif;
+    letter-spacing: 3px;
+}
+
+@media (max-width: 694px) {
+    
+    #remain {
+        height: 56px;
+    }
+    
+    #menu {
+        height: 56px;
+    }
+    
+    #buttons {
+        margin-right: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    #buttons a {
+        font-size: 20px;
+        margin: 10px 15px;
+        letter-spacing: 3px;
+    }
+    
+}
+
+@media (max-width: 560px) {
+    
+    #remain {
+        height: 37px;
+    }
+    
+    #menu {
+        height: 37px;
+    }
+    
+    #buttons {
+        margin-right: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    #buttons a {
+        font-size: 15px;
+        margin: 10px 10px;
+        letter-spacing: 3px;
+    }
+}
+
+@media (max-width: 428px) {
+    
+    #remain {
+        height: 34px;
+    }
+    
+    #menu {
+        height: 34px;
+    }
+    
+    #buttons {
+        margin-right: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }    
+    
+    #buttons a {
+        font-size: 10px;
+        margin: 10px 5px;
+        letter-spacing: 3px;
+    }
+}
+
+@media (max-width: 250px) {
+    
+    #remain {
+        height: 34px;
+    }
+    
+    #menu {
+        height: 34px;
+    }
+    
+    #buttons {
+        margin-right: 1px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }    
+    
+    #buttons a {
+        font-size: 4px;
+        margin: 3px 1px;
+        letter-spacing: 2px;
+    }
+}
+
+/*--------------------p-u--------------------*/
+
+#p-u-img {
+    width: 100%;
+    margin-top: 50px;
+    padding-top: 10%;
+}
+
+#pu1 {
+    width: 45%;
+    position: relative;
+    left: 7%;
+    vertical-align: top;
+}
+
+#pu2 {
+    width: 35%;
+    left: 14%;
+    margin-top: 10%;
+    position: relative;
+    vertical-align: top;
+}
+
+#pu3 {
+    width: 40%;
+    position: relative;
+    left: 10%;
+    margin-top: -25%;
+}
+
+#p-u-fashion {
+    position: relative;
+    margin-top: -40%;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+}
+
+#p-u-fashion img {
+    width: 35%;
+}
+
+#brand-name {
+    width: 100%;
+    text-align: center;
+    margin-top: 400px;
+}
+
+#brand-name img {
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    
+    #brand-name {
+        margin-top: 200px;
+    }
+    
+}
+
+/*--------------------about--------------------*/
+
+#about {
+    margin-top: 400px;
+    padding-top: 50px;
+}
+
+#about-description {
+    text-align: center;
+    background-color: #a5a5a5;
+    padding: 50px 0;
+}
+    
+#about-description p {
+    width: 80%;
+    text-align: center;
+    font-size: 20px;
+    margin: 30px auto;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 100;
+    line-height: 60px;
+    color: #ffffff;
+}
+    
+#about-description img {
+    margin: 20px 0;
+    width: 50%;
+}
+
+@media (max-width: 1280px) {
+    
+    #about-description p {
+        width: 80%;
+        font-size: 20px;
+        font-weight: 100;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    
+    #about-description p {
+        width: 90%;
+        font-size: 15px;
+        font-weight: 100;
+    }
+    
+}
+
+
+@media (max-width: 480px) {
+    
+    #about {
+        margin-top: 200px;
+    }
+    
+    #about-description p {
+        width: 90%;
+        text-align: left;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 30px;
+    }
+    
+    #about-description img {
+        width: 70%;
+    }
+    
+}
+
+/*--------------------product--------------------*/
+
+#product {
+    text-align: center;
+    margin-top: 150px;
+    padding-top: 50px;
+}
+
+#product-img {
+    width: 100%;
+    padding: 50px 0;
+}
+
+#product-img img {
+    width: 50%;
+}
+
+#product-description {
+    text-align: center;
+}
+
+#product-description img {
+    width: 50%;
+    margin: 50px 0;
+}
+
+#product-description p {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 100;
+    font-size: 40px;
+    color: #555555;
+}
+
+@media (max-width: 1280px) {
+    
+    #product-description p {
+        font-weight: 100;
+        font-size: 30px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    
+    #product {
+        margin-top: 100px;
+    }
+    
+    #product-img img {
+        width: 70%;
+    }
+    
+    #product-description p {
+        font-weight: 100;
+        font-size: 15px;
+    }
+    
+    #product-description img {
+        width: 70%;
+    }
+    
+    #product-description img {
+        width: 70%;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    
+    #product {
+        margin-top: 100px;
+    }
+    
+    #product-img img {
+        width: 70%;
+    }
+    
+    #product-description p {
+        font-weight: 100;
+        font-size: 15px;
+    }
+    
+    #product-description img {
+        width: 70%;
+    }
+    
+    #product-description img {
+        width: 70%;
+    }
+    
+}
+
+/*--------------------story--------------------*/
+
+#story {
+    margin-top: 150px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+#wheelchair-description {
+    margin-top: 200px;
+}
+
+#wheelchair-description p {
+    width: 80%;
+    text-align: center;
+    font-size: 20px;
+    margin: 30px auto;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 100;
+    line-height: 60px;
+    color: #555555;
+}
+
+#wheelchair-description img {
+    margin: 50px 0;
+}
+
+#story-description {
+    padding: 50px 0;
+    background-color: #a5a5a5;
+}
+
+#story-description p {
+    width: 80%;
+    text-align: center;
+    font-size: 20px;
+    margin: 30px auto;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 100;
+    line-height: 60px;
+    color: #ffffff;
+}
+
+#story-description img {
+    margin: 50px 0;
+}
+
+#story img {
+    width: 50%;
+}
+
+@media (max-width: 1280px) {
+    
+    #story-description p {
+        width: 80%;
+        font-size: 20px;
+        font-weight: 100;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    
+    #story-description p {
+        width: 90%;
+        font-size: 15px;
+        font-weight: 100;
+    }
+    
+}
+
+@media (max-width: 480px) {
+
+    #story-description p {
+        width: 90%;
+        font-size: 20px;
+        font-weight: 100;
+        text-align: left;
+        line-height: 30px;
+    }
+    
+    #story img {
+        width: 70%;
+    }
+    
+    #wheelchair-description {
+        margin-top: 100px;
+    }
+    
+    #wheelchair-description p {
+        width: 90%;
+        font-size: 20px;
+        text-align: left;
+        font-weight: 100;
+        line-height: 30px;
+    }
+    
+}
+
+/*--------------------shop--------------------*/
+
+#shop {
+    text-align: center;
+    margin-top: 150px;
+    padding-top: 50px;
+}
+
+#shop-description a {
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    color: #e1576e;
+    text-decoration: none;
+    background-color: #fff;
+    border: solid 3px #e1576e;
+    padding: 15px 50px;
+}
+
+#shop-description a:hover {
+    color: #ffffff;
+    background-color: #e1576e;
+    transition: ease 1000ms;
+}
+
+@media (max-width: 480px) {
+    
+    #shop {
+        margin-top: 100px;
+    }
+    
+    #shop-description a {
+        font-size: 20px;
+    }
+}
+
+/*--------------------sns--------------------*/
+
+#sns {
+    text-align: center;
+    margin-top: 150px;
+    padding-top: 50px;
+}
+
+#instagram {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 50px 0;
+}
+
+#instagram a {
+    color: #555555;
+    text-decoration: none;
+    font-size: 40px;
+}
+
+#twitter {
+    background-color: #ffffff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#twitter a {
+    color: #555555;
+    text-decoration: none;
+    font-size: 40px;
+}
+
+.timeline-Widget {
+    width: 50%;
+    margin: 20px auto;
+}
+
+.timeline-Tweet-text {
+    font-size: 15px !important;
+    line-height: 20px !important;
+}
+
+.snapwidget-widget {
+    width: 50% !important;
+    background-color: #ffffff;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    
+    #instagram a {
+        font-size: 30px;
+    }
+    
+    #twitter a {
+        font-size: 30px;
+    }
+    
+    .timeline-Tweet-text {
+        font-size: 12px !important;
+        line-height: 17px !important;
+    }
+    
+    .timeline-Widget {
+        width: 70%;
+        margin: 20px auto;
+    }
+    
+    .snapwidget-widget {
+        width: 70% !important;
+        background-color: #ffffff;
+        margin: 20px 0;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    
+    #sns {
+        margin-top: 100px;
+    }
+    
+    #instagram {
+        margin-top: 50px;
+        padding: 0;
+    }
+    
+    #instagram a {
+        font-size: 25px;
+    }
+    
+    #twitter {
+        margin-top: 50px;
+        padding: 0;
+    }
+    
+    #twitter a {
+        font-size: 25px;
+    }
+    
+    .timeline-Widget {
+        width: 70% !important;
+        border: solid 1px #eeeeee;
+        margin: 20px auto;
+    }
+    
+    .snapwidget-widget {
+        width: 70% !important;
+        background-color: #ffffff;
+        margin: 20px 0;
+    }
+    
+}
+
+/*--------------------sns icons--------------------*/
+
+#sns-icons {
+    position: fixed;
+    top: 67%;
+    right: 0;
+}
+
+#sns-icons img {
+    display: block;
+    margin: 30px;
+    width: 50px;
+    opacity: 0.6;
+    z-index: 9999;
+}
+
+#sns-icons img:hover {
+    opacity: 1.0;
+    transition: 300ms;
+}
+
+@media (max-width: 768px) {
+    
+    #sns-icons {
+        top: 67%;
+        right: 0;
+    }
+    
+    #sns-icons img {
+        margin: 30px 20px;
+        width: 40px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    
+    #sns-icons {
+        top: 67%;
+        right: 0;
+    }
+    
+    #sns-icons img {
+        margin: 30px 20px;
+        width: 35px;
+    }
+    
+}
+
+.user-id {
+    font-size: 25px;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+
+/*--------------------contact--------------------*/
+
+#contact {
+    text-align: center;
+    margin-top: 150px;
+    padding-top: 50px;
+}
+
+#contact-description {
+    background-color: #a5a5a5;
+    text-align: center;
+    padding: 100px 0;
+}
+
+#e-mail {
+    font-size: 60px;
+    color: #ffffff;
+    margin: 20px 0;
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 100;
+}
+
+#contact-description a {
+    font-size: 40px;
+    color: #ffffff;
+    margin: 20px 0;
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 100;
+}
+
+@media (max-width: 480px) {
+    
+    #contact {
+        margin-top: 100px;
+    }
+    
+    #contact-description {
+        padding: 20px 0 50px 0;
+    }
+    
+    #e-mail {
+        font-size: 40px;
+        margin: 20px 0;
+        font-weight: 100;
+    }
+    
+    #contact-description a {
+        font-size: 30px;
+        margin: 20px 0;
+        font-weight: 100;
+    }
+    
+}
+
+/*--------------------company--------------------*/
+
+#company {
+    text-align: center;
+    margin-top: 150px;
+    padding-top: 50px;
+}
+
+#company-description {
+    padding: 50px 0;
+    background-color: #eeeeee;
+    text-align: center;
+}
+
+#company-description img {
+    width: 30%;
+    margin: 50px 0;
+}
+
+#company-description p {
+    text-align: center;
+    font-size: 40px;
+    margin: 50px 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    color: #555555;
+}
+
+#company-description a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 30px;
+    margin: 30px 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    color: #555555;
+    border-bottom: solid 1.5px #555555;
+    opacity: 0.8;
+    transition: 500ms;
+}
+
+#company-description a:hover {
+    opacity: 1.0;
+    transition: 500ms;
+}
+
+@media (max-width: 480px) {
+    
+    #company {
+        margin-top: 100px;
+    }
+    
+    #company-description img {
+        width: 70%;
+        margin: 20px 0;
+    }
+    
+    #company-description p {
+        font-size: 30px;
+    }
+    
+    #company-description a {
+        font-size: 20px;
+        border-bottom: solid 1px #555555;
+    }
+    
+}
