@@ -1,20 +1,23 @@
+
+
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="./style.css" type="text/css">
-		<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Palanquin:100,300" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300" rel="stylesheet">
-		
-		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-		
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		
-		<!--<script type="text/javascript">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SCEGLISTY</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sceglisty.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Palanquin:100,300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300" rel="stylesheet">
+
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <!--<script type="text/javascript">
 			
 			$(function() {
 				var h = $(window).height();
@@ -39,307 +42,294 @@
 			}*/
 			
 		</script>-->
-		
-		<script type="text/javascript">
-			
-			$(function(){
-				var WindowHeight = $(window).height();
-				$('#top').css("height", "WindowHeight");
-			});
-		
-			$(window).load(function(){
-				$('.loading').fadeOut();	
-			});
-			
-			$(function(){
-				setTimeout('stopload()',10000);
-			});
-			
-			function stopload(){
-				$('.loading').delay(600).fadeOut(300);
-			}
 
-		</script>
-		
-		<script type="text/javascript">
-            $(function(){
-                $(window).scroll(function (){
-                    $('.fadein').each(function(){
-                        var elemPos = $(this).offset().top;
-                        var scroll = $(window).scrollTop();
-                        var windowHeight = $(window).height();
-                        if (scroll > elemPos - windowHeight + 200){
-                            $(this).addClass('scrollin');
-                        }
-                    });
+    <script type="text/javascript">
+        $(function() {
+            var WindowHeight = $(window).height();
+            $('#top').css("height", "WindowHeight");
+        });
+
+        $(window).load(function() {
+            $('.loading').fadeOut();
+        });
+
+        $(function() {
+            setTimeout('stopload()', 10000);
+        });
+
+        function stopload() {
+            $('.loading').delay(600).fadeOut(300);
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        $(function() {
+            $(window).scroll(function() {
+                $('.fadein').each(function() {
+                    var elemPos = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    if (scroll > elemPos - windowHeight + 200) {
+                        $(this).addClass('scrollin');
+                    }
                 });
             });
-        </script>
-		
-		<script type="text/javascript">
-			$(function() {
-			    var nav = $('#menu'); 
-			    var navTop = nav.offset().top;
-			    $(window).scroll(function () {
-			        var winTop = $(this).scrollTop();
-			        if (winTop >= navTop) {
-			            nav.addClass('fixed');
-			        } else if (winTop <= navTop) {
-			            nav.removeClass('fixed');
-			        }
-			    });
-			});
-		</script>
-		
-		<script type="text/javascript">
-			
-			function changeTwitterWidgetDesign(){
-				var $twitter_widget = $('iframe.twitter-timeline');
-				var $twitter_widget_contents = $twitter_widget.contents();
-				
-				if ($twitter_widget.length > 0 && $twitter_widget[0].contentWindow.document.body.innerHTML !== ""){
-					$twitter_widget_contents.find('head').append('<link href="/style.css" rel="stylesheet" type="text/css">');
-				} else {
-					setTimeout(function(){
-						changeTwitterWidgetDesign();
-					}, 350);
-				}
-			}
-			changeTwitterWidgetDesign();
-		</script>
-		
-		<script type="text/javascript">
-			
-			function changeSnapwidgetDesign(){
-				var $instagram_widget = $('iframe.snapwidget-widget');
-				var $instagram_widget_contents = $instagram_widget.contents();
-				
-				if ($instagram_widget.length > 0 && $instagram_widget[0].contentWindow.document.body.innerHTML !== ""){
-					$instagram_widget_contents.find('head').append('<link href="/style.css" rel="stylesheet" type="text/css">');
-				} else {
-					setTimeout(function(){
-						changeSnapwidgetDesign();
-					}, 350);
-				}
-			}
-			changeSnapwidgetDesign();
-		</script>
-		
-		<script type="text/javascript">
-			
-			$(function(){
-				$('a[href^="#"]').click(function(){
-					var speed = 1500;
-			    	var href= $(this).attr("href");
-			    	var target = $(href == "#" || href == "" ? 'html' : href);
-			    	var position = target.offset().top;
-			    	$("html, body").animate({scrollTop:position}, speed, "swing");
-			    	return false;
-				});
-			});
-			
-		</script>
-		
-	</head>
-	
-	<body>
-		
-		<div class="loading">
-			<img src="/images/recno.png">
-		</div>
-		
-		<!--<div id="loader-bg">
+        });
+
+    </script>
+
+    <script type="text/javascript">
+        $(function() {
+            var nav = $('#menu');
+            var navTop = nav.offset().top;
+            $(window).scroll(function() {
+                var winTop = $(this).scrollTop();
+                if (winTop >= navTop) {
+                    nav.addClass('fixed');
+                } else if (winTop <= navTop) {
+                    nav.removeClass('fixed');
+                }
+            });
+        });
+
+    </script>
+
+    <script type="text/javascript">
+        function changeTwitterWidgetDesign() {
+            var $twitter_widget = $('iframe.twitter-timeline');
+            var $twitter_widget_contents = $twitter_widget.contents();
+
+            if ($twitter_widget.length > 0 && $twitter_widget[0].contentWindow.document.body.innerHTML !== "") {
+                $twitter_widget_contents.find('head').append('<link href="/style.css" rel="stylesheet" type="text/css">');
+            } else {
+                setTimeout(function() {
+                    changeTwitterWidgetDesign();
+                }, 350);
+            }
+        }
+        changeTwitterWidgetDesign();
+
+    </script>
+
+    <script type="text/javascript">
+        function changeSnapwidgetDesign() {
+            var $instagram_widget = $('iframe.snapwidget-widget');
+            var $instagram_widget_contents = $instagram_widget.contents();
+
+            if ($instagram_widget.length > 0 && $instagram_widget[0].contentWindow.document.body.innerHTML !== "") {
+                $instagram_widget_contents.find('head').append('<link href="/style.css" rel="stylesheet" type="text/css">');
+            } else {
+                setTimeout(function() {
+                    changeSnapwidgetDesign();
+                }, 350);
+            }
+        }
+        changeSnapwidgetDesign();
+
+    </script>
+
+    <script type="text/javascript">
+        $(function() {
+            $('a[href^="#"]').click(function() {
+                var speed = 1500;
+                var href = $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top;
+                $("html, body").animate({
+                    scrollTop: position
+                }, speed, "swing");
+                return false;
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="loading">
+        <img src="/img/recno.png">
+    </div>
+
+    <!--<div id="loader-bg">
 			<div id="loader">
-				<img src="/images/recno.png">
+				<img src="/img/recno.png">
 			    <p>Now Loading...</p>
 			</div>
 		</div>-->
-			
-		<!--<div id="wrap"></div>-->
 
-		<div id="top">
-			<img id="top-img" src="/images/1.jpg"></img>
-		</div>
-			
-		<div id="remain">
-			<menu id="menu">
-				<div id="buttons">
-					<a href="#about">ABOUT</a>
-					<a href="#product">PRODUCT</a>
-					<a href="#story">STORY</a>
-					<a href="#sns">SNS</a>
-					<a href="#contact">CONTACT</a>
-				</div>
-			</menu>
-		</div>
-			
-		<div id="p-u-img">
-			<img id="pu1" src="/images/21.jpg"></img>
-			<img id="pu2" src="/images/4.jpg"></img>
-			<img id="pu3" src="/images/5.jpg"></img>
-		</div>
-			
-		<div id="p-u-fashion">
-			<img src="/images/p-u.jpg"></img>
-		</div>
-			
-		<!--<div id="brand-name">
-			<img src="/images/brand-sceglisty.jpg"></img>
+    <!--<div id="wrap"></div>-->
+
+    <div id="top">
+        <img id="top-img" src="/img/1.jpg">
+    </div>
+
+    <div id="remain">
+        <menu id="menu">
+            <div id="buttons">
+                <a href="#about">ABOUT</a>
+                <a href="#product">PRODUCT</a>
+                <a href="#story">STORY</a>
+                <a href="#sns">SNS</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+        </menu>
+    </div>
+
+    <div id="p-u-img">
+        <img id="pu1" src="/img/21.jpg">
+        <img id="pu2" src="/img/4.jpg">
+        <img id="pu3" src="/img/5.jpg">
+    </div>
+
+    <div id="p-u-fashion">
+        <img src="/img/p-u.jpg">
+    </div>
+
+    <!--<div id="brand-name">
+			<img src="/img/brand-sceglisty.jpg">
 		</div>-->
-			
-		<div id="about">
-			<p class="contents fadein">ABOUT</p>
-			<div id="about-description">
-				<p class="pc">SCEGLISTYは「違いを楽しむ、違うのがあたりまえなバッグ」をコンセプトとした<br/>
-				カスタマイズ・バッグブランドです。<br/>
-				Scegliereというイタリア語の“選ぶ”という言葉と<br/>
-				英語のStyleを合わせてSCEGLISTY(シェリスティ)という<br/>
-				カスタマイズ・バッグ ブランドらしく<br/>
-				「選べるスタイル」という意味のブランド名です。<br/>
-				</p>
-				<p class="sp">SCEGLISTYは「違いを楽しむ、違うのがあたりまえなバッグ」をコンセプトとした
-				カスタマイズ・バッグブランドです。
-				Scegliereというイタリア語の“選ぶ”という言葉と
-				英語のStyleを合わせてSCEGLISTY(シェリスティ)という
-				カスタマイズ・バッグ ブランドらしく
-				「選べるスタイル」という意味のブランド名です。
-				</p>
-				<img src="/images/IMG_4896.PNG"></img>
-			</div>
-		</div>
-			
-		<div id="product">
-			<p class="contents fadein">PRODUCT</p>
-			<div id="product-img">
-				<img src="/images/10.jpg">
-			</div>
-			<div id="product-description">
-				<p class="pc">3つのパーツに分かれるカスタマイズバッグ</p>
-				<p class="sp">3つのパーツに分かれる<br/>カスタマイズバッグ</p>
-				<img src="/images/1537759741415.jpg"></img>
-				<img src="/images/22.jpg"></img>
-				<img src="/images/1537761261429.jpg"></img>
-				<img src="/images/front.jpg"></img>
-				<img src="/images/flap.jpg"></img>
-				<p>組合せは全部で９パターン</p>
-				<img src="/images/9patterns.jpg"></img>
-				<p>ショルダーストラップをつけて</p>
-				<img src="/images/shoulder1.jpg"></img>
-				<p class="pc">フラップはバッグから取り外して、ポーチやクラッチバッグ、<br/>
-				ストラップをつけてミニショルダーバッグとしても使えます。</p>
-				<p class="sp">フラップはバッグから取り外して、<br/>
-				ポーチやクラッチバッグ、<br/>
-				ストラップをつけて<br/>
-				ミニショルダーバッグとしても使えます。</p>
-				<img src="/images/shoulder2.jpg"></img>
-				<p class="pc">A4サイズや500mlペットボトル、折りたたみ傘が入る大きさ</p>
-				<p class="sp">A4サイズや500mlペットボトル、<br/>
-				折りたたみ傘が入る大きさ</p>
-				<img src="/images/size1.jpg"></img>
-				<img src="/images/size2.jpg"></img>
-				<p>Frontパーツの付け外しはこのファスナーで。<br/>
-				Flapはスナップボタンで付け外しをします。</p>
-				<img src="/images/size3.jpg"></img>
-					
-			</div>
-		</div>
-			
-		<div id="story">
-			<p class="contents fadein">STORY</p>
-			<div id="story-description">
-				<p id="story-title">「みんな違うのがあたりまえ、違いを楽しむカスタマイズ・バッグ」</p>
-				<p class="pc">
-				このカスタマイズ・バッグは、好きなパーツを組み合わせて使うことができます。<br/>
-				それぞれのパーツが持った色や雰囲気が違うのでそれを組み合わせることで<br/>
-				多様な表情の変化を楽しむことができます。<br/>
-				一味違うこのカスタマイズ・バッグで自分好みの組み合わせ、<br/>
-				人との違いをお楽しみください。<br/>
-				このバッグはカスタマイズ以外にもう一つのコンセプトを掲げています。<br/>
-				それは、ユニバーサルファッション。<br/>
-				人はだれもが他人との“違い”を持っている中で、みんなが使いやすいバッグであり、<br/>
-				すべての人に優しいデザインであることをめざしています。<br/>
-				車いすユーザーの方でも使いやすいよう専用のストラップがあったり、<br/>
-				手が不自由な方でもモノを取り出しやすいように<br/>
-				口の部分にファスナーを使わず大きめのフラップにしたり、<br/>
-				バッグのサイズもA４サイズが入ってもなるべくコンパクトなサイズにしたり、<br/>
-				みんなに優しいデザインの工夫がされています。</p>
-				<p class="sp">みんな違うのがあたりまえ、違いを楽しむカスタマイズ・バッグ
-				このカスタマイズ・バッグは、好きなパーツを組み合わせて使うことができます。
-				それぞれのパーツが持った色や雰囲気が違うのでそれを組み合わせることで
-				多様な表情の変化を楽しむことができます。
-				一味違うこのカスタマイズ・バッグで自分好みの組み合わせ、
-				人との違いをお楽しみください。</p>
-				<p class="sp">このバッグはカスタマイズ以外にもう一つのコンセプトを掲げています。
-				それは、ユニバーサルファッション。
-				人はだれもが他人との“違い”を持っている中で、みんなが使いやすいバッグであり、
-				すべての人に優しいデザインであることをめざしています。</p>
-				<p class="sp">車いすユーザーの方でも使いやすいよう専用のストラップがあったり、
-				手が不自由な方でもモノを取り出しやすいように
-				口の部分にファスナーを使わず大きめのフラップにしたり、
-				バッグのサイズもA４サイズが入ってもなるべくコンパクトなサイズにしたり、
-				みんなに優しいデザインの工夫がされています。</p>
-				<img src="/images/p-u.jpg">
-			</div>
-			<div id="wheelchair-description">
-				<img src="/images/23.jpg">
-				<img src="/images/24.jpg">
-				<p class="pc">車いす用ストラップをつけると長さ調節が可能な車いす用ストラップでいろいろな車いすに対応。<br/>
-				A4サイズが入るバッグで車いすでも使いやすいおしゃれなバッグがなかなかない、<br/>
-				そんな声を聞いて車いすにも合う形のバッグと車いす用ストラップをつくりました。</p>
-				<p class="sp">車いす用ストラップをつけると長さ調節が可能な車いす用ストラップでいろいろな車いすに対応。
-				A4サイズが入るバッグで車いすでも使いやすいおしゃれなバッグがなかなかない、
-				そんな声を聞いて車いすにも合う形のバッグと車いす用ストラップをつくりました。</p>
-				<img src="/images/25.jpg">
-			</div>
-		</div>
-			
-		<div id="shop">
-			<p class="contents fadein">SHOP</p>
-			<div id="shop-description">
-				<a href="https://camp-fire.jp/projects/98607/preview?token=3gsgblwl" target="_blank">ご購入はこちらから</a>
-			</div>
-		</div>
-			
-		<div id="sns">
-			<p class="contents fadein">SNS</p>
-			<div id="twitter">
-				<a href="https://twitter.com/sceglisty"><span class="sns-name">Twitter</span><span class="user-id">@sceglisty</span></a>
-				<a class="twitter-timeline" href="https://twitter.com/sceglisty?ref_src=twsrc%5Etfw" data-tweet-limit="3" data-chrome="noheader">Tweets by sceglisty</a>
-			</div>
-			<div id="instagram">
-				<a href="https://instagram.com/sceglisty" target="_blank"><span class="sns-name">Instagram</span><span class="user-id">@sceglisty</span></a>
-				<div class="widget-container">
-					<!-- InstaWidget 
+
+    <div id="about">
+        <p class="contents fadein">ABOUT</p>
+        <div id="about-description">
+            <p class="pc">SCEGLISTYは「違いを楽しむ、違うのがあたりまえなバッグ」をコンセプトとした<br/> カスタマイズ・バッグブランドです。
+                <br/> Scegliereというイタリア語の“選ぶ”という言葉と
+                <br/> 英語のStyleを合わせてSCEGLISTY(シェリスティ)という
+                <br/> カスタマイズ・バッグ ブランドらしく<br/> 「選べるスタイル」という意味のブランド名です。
+                <br/>
+            </p>
+            <p class="sp">SCEGLISTYは「違いを楽しむ、違うのがあたりまえなバッグ」をコンセプトとした カスタマイズ・バッグブランドです。 Scegliereというイタリア語の“選ぶ”という言葉と 英語のStyleを合わせてSCEGLISTY(シェリスティ)という カスタマイズ・バッグ ブランドらしく 「選べるスタイル」という意味のブランド名です。
+            </p>
+            <img src="/img/IMG_4896.PNG">
+        </div>
+    </div>
+
+    <div id="product">
+        <p class="contents fadein">PRODUCT</p>
+        <div id="product-img">
+            <img src="/img/10.jpg">
+        </div>
+        <div id="product-description">
+            <p class="pc">3つのパーツに分かれるカスタマイズバッグ</p>
+            <p class="sp">3つのパーツに分かれる<br/>カスタマイズバッグ</p>
+            <img src="/img/1537759741415.jpg">
+            <img src="/img/22.jpg">
+            <img src="/img/1537761261429.jpg">
+            <img src="/img/front.jpg">
+            <img src="/img/flap.jpg">
+            <p>組合せは全部で９パターン</p>
+            <img src="/img/9patterns.jpg">
+            <p>ショルダーストラップをつけて</p>
+            <img src="/img/shoulder1.jpg">
+            <p class="pc">フラップはバッグから取り外して、ポーチやクラッチバッグ、<br/> ストラップをつけてミニショルダーバッグとしても使えます。
+            </p>
+            <p class="sp">フラップはバッグから取り外して、<br/> ポーチやクラッチバッグ、
+                <br/> ストラップをつけて
+                <br/> ミニショルダーバッグとしても使えます。
+            </p>
+            <img src="/img/shoulder2.jpg">
+            <p class="pc">A4サイズや500mlペットボトル、折りたたみ傘が入る大きさ</p>
+            <p class="sp">A4サイズや500mlペットボトル、<br/> 折りたたみ傘が入る大きさ
+            </p>
+            <img src="/img/size1.jpg">
+            <img src="/img/size2.jpg">
+            <p>Frontパーツの付け外しはこのファスナーで。<br/> Flapはスナップボタンで付け外しをします。
+            </p>
+            <img src="/img/size3.jpg">
+
+        </div>
+    </div>
+
+    <div id="story">
+        <p class="contents fadein">STORY</p>
+        <div id="story-description">
+            <p id="story-title">「みんな違うのがあたりまえ、違いを楽しむカスタマイズ・バッグ」</p>
+            <p class="pc">
+                このカスタマイズ・バッグは、好きなパーツを組み合わせて使うことができます。<br/> それぞれのパーツが持った色や雰囲気が違うのでそれを組み合わせることで
+                <br/> 多様な表情の変化を楽しむことができます。
+                <br/> 一味違うこのカスタマイズ・バッグで自分好みの組み合わせ、
+                <br/> 人との違いをお楽しみください。
+                <br/> このバッグはカスタマイズ以外にもう一つのコンセプトを掲げています。
+                <br/> それは、ユニバーサルファッション。
+                <br/> 人はだれもが他人との“違い”を持っている中で、みんなが使いやすいバッグであり、
+                <br/> すべての人に優しいデザインであることをめざしています。
+                <br/> 車いすユーザーの方でも使いやすいよう専用のストラップがあったり、
+                <br/> 手が不自由な方でもモノを取り出しやすいように
+                <br/> 口の部分にファスナーを使わず大きめのフラップにしたり、
+                <br/> バッグのサイズもA４サイズが入ってもなるべくコンパクトなサイズにしたり、
+                <br/> みんなに優しいデザインの工夫がされています。
+            </p>
+            <p class="sp">みんな違うのがあたりまえ、違いを楽しむカスタマイズ・バッグ このカスタマイズ・バッグは、好きなパーツを組み合わせて使うことができます。 それぞれのパーツが持った色や雰囲気が違うのでそれを組み合わせることで 多様な表情の変化を楽しむことができます。 一味違うこのカスタマイズ・バッグで自分好みの組み合わせ、 人との違いをお楽しみください。
+            </p>
+            <p class="sp">このバッグはカスタマイズ以外にもう一つのコンセプトを掲げています。 それは、ユニバーサルファッション。 人はだれもが他人との“違い”を持っている中で、みんなが使いやすいバッグであり、 すべての人に優しいデザインであることをめざしています。
+            </p>
+            <p class="sp">車いすユーザーの方でも使いやすいよう専用のストラップがあったり、 手が不自由な方でもモノを取り出しやすいように 口の部分にファスナーを使わず大きめのフラップにしたり、 バッグのサイズもA４サイズが入ってもなるべくコンパクトなサイズにしたり、 みんなに優しいデザインの工夫がされています。
+            </p>
+            <img src="/img/p-u.jpg">
+        </div>
+        <div id="wheelchair-description">
+            <img src="/img/23.jpg">
+            <img src="/img/24.jpg">
+            <p class="pc">車いす用ストラップをつけると長さ調節が可能な車いす用ストラップでいろいろな車いすに対応。<br/> A4サイズが入るバッグで車いすでも使いやすいおしゃれなバッグがなかなかない、
+                <br/> そんな声を聞いて車いすにも合う形のバッグと車いす用ストラップをつくりました。
+            </p>
+            <p class="sp">車いす用ストラップをつけると長さ調節が可能な車いす用ストラップでいろいろな車いすに対応。 A4サイズが入るバッグで車いすでも使いやすいおしゃれなバッグがなかなかない、 そんな声を聞いて車いすにも合う形のバッグと車いす用ストラップをつくりました。
+            </p>
+            <img src="/img/25.jpg">
+        </div>
+    </div>
+
+    <div id="shop">
+        <p class="contents fadein">SHOP</p>
+        <div id="shop-description">
+            <a href="https://camp-fire.jp/projects/98607/preview?token=3gsgblwl" target="_blank">ご購入はこちらから</a>
+        </div>
+    </div>
+
+    <div id="sns">
+        <p class="contents fadein">SNS</p>
+        <div id="twitter">
+            <a href="https://twitter.com/sceglisty"><span class="sns-name">Twitter</span><span class="user-id">@sceglisty</span></a>
+            <a class="twitter-timeline" href="https://twitter.com/sceglisty?ref_src=twsrc%5Etfw" data-tweet-limit="3" data-chrome="noheader">Tweets by sceglisty</a>
+        </div>
+        <div id="instagram">
+            <a href="https://instagram.com/sceglisty" target="_blank"><span class="sns-name">Instagram</span><span class="user-id">@sceglisty</span></a>
+            <div class="widget-container">
+                <!-- InstaWidget 
 						<a href="https://instawidget.net/v/user/sceglisty" id="link-6d79dee3d2b04f13eab30dbe8fb1bd3475d78ee481ab6729ce9b99b55b2ee256">@sceglisty</a>
 						<script src="https://instawidget.net/js/instawidget.js?u=6d79dee3d2b04f13eab30dbe8fb1bd3475d78ee481ab6729ce9b99b55b2ee256&width=50%"></script>-->
-					<!-- SnapWidget -->
-					<script src="https://snapwidget.com/js/snapwidget.js"></script>
-					<iframe src="https://snapwidget.com/embed/602594" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
-				</div>
-			</div>
-		</div>
-			
-		<div id="contact">
-			<p class="contents fadein">CONTACT</p>
-			<div id="contact-description">
-				<p id="e-mail">E-mail</p>
-				<a href="mailto:sceglisty@gmail.com">sceglisty@gmail.com</a>
-			</div>
-		</div>
-			
-		<div id="company">
-			<p class="contents fadein">COMPANY</p>
-			<div id="company-description">
-				<img src="/images/recno.png">
-				<p id="company-name">株式会社Recno</p>
-				<a href="https://www.recno.work" id="company-link">https://www.recno.work</a>
-			</div>
-		</div>
-			
-		<div id="sns-icons">
-			<a href="https://www.twitter.com/sceglisty" target="_blank"><img src="/images/twitter.svg"></a>
-			<a href="https://www.instagram.com/sceglisty" target="_blank"><img src="/images/instagram.svg"></a>
-		</div>
-	
-	</body>
+                <!-- SnapWidget -->
+                <script src="https://snapwidget.com/js/snapwidget.js"></script>
+                <iframe src="https://snapwidget.com/embed/602594" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <p class="contents fadein">CONTACT</p>
+        <div id="contact-description">
+            <p id="e-mail">E-mail</p>
+            <a href="mailto:sceglisty@gmail.com">sceglisty@gmail.com</a>
+        </div>
+    </div>
+
+    <div id="company">
+        <p class="contents fadein">COMPANY</p>
+        <div id="company-description">
+            <img src="/img/recno.png">
+            <p id="company-name">株式会社Recno</p>
+            <a href="https://www.recno.work" id="company-link">https://www.recno.work</a>
+        </div>
+    </div>
+
+    <div id="sns-icons">
+        <a href="https://www.twitter.com/sceglisty" target="_blank"><img src="/img/twitter.svg"></a>
+        <a href="https://www.instagram.com/sceglisty" target="_blank"><img src="/img/instagram.svg"></a>
+    </div>
+
+</body>
+
 </html>
