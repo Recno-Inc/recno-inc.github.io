@@ -257,7 +257,7 @@ header .intro-text {
 
 /* product */
 
-#brand img {
+.brand-description a img {
     width: 100%;
 }
 
